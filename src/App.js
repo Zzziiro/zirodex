@@ -1,17 +1,9 @@
 import React from "react";
 import "./App.css";
-import PokeCard from "./components/PokeCard.tsx";
+import Main from "./pages/Main";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          <PokeCard />
-        </p>
-      </header>
-    </div>
-  );
+  return <Main />;
 }
 
 export default App;

@@ -5,27 +5,35 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 
-function PokeCard() {
+export type PokeCardProps = {
+  name: string;
+  sprite: string;
+  id: number;
+  type: string;
+  type2?: string;
+};
+
+const PokeCard = ({ name, sprite, id, type, type2 }: PokeCardProps) => {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 200 }}>
       <CardActionArea>
         <CardMedia
           component="img"
-          height="140"
-          image="/static/images/cards/contemplative-reptile.jpg"
+          height="180"
+          image={sprite}
           alt="foto do bicho"
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            Nome do bicho
+          <Typography gutterBottom variant="h4" component="div">
+            {name}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            n° - TIPO / TIPO
+            {id} - {type} {type2 && ` / ${type2}`}
           </Typography>
         </CardContent>
       </CardActionArea>
     </Card>
   );
-}
+};
 
 export default PokeCard;
