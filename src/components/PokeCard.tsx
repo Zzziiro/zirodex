@@ -1,9 +1,4 @@
 import * as React from "react";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
-import { CardActionArea } from "@mui/material";
 
 export type PokeCardProps = {
   name: string;
@@ -14,25 +9,47 @@ export type PokeCardProps = {
 };
 
 const PokeCard = ({ name, sprite, id, type, type2 }: PokeCardProps) => {
+  const upperName = name.charAt(0).toUpperCase() + name.slice(1);
+
   return (
-    <Card sx={{ maxWidth: 200 }}>
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          height="180"
-          image={sprite}
-          alt="foto do bicho"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h4" component="div">
-            {name}
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            {id} - {type} {type2 && ` / ${type2}`}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
+    <div
+      // onClick={}
+      content="width=device-width, initial-scale=1.0"
+      className="PokeCard"
+      style={{
+        width: 195,
+        marginRight: "auto",
+        // backgroundColor: "#dc092d",
+      }}
+    >
+      <img
+        style={{
+          height: 180,
+          width: 180,
+          backgroundColor: "#deddde",
+          borderRadius: 10,
+          marginBottom: 5,
+          // marginLeft: 40,
+          // borderColor: "#232323",
+          // border: "solid",
+        }}
+        src={sprite}
+        alt="foto do bicho"
+      />
+      <a
+        className="CardTitle"
+        style={{
+          top: 0,
+          marginLeft: 10,
+          fontSize: 20,
+        }}
+      >
+        {upperName}
+      </a>
+      <body style={{ marginLeft: 10, marginBottom: 10 }} color="text.secondary">
+        {id} - {type} {type2 && ` / ${type2}`}
+      </body>
+    </div>
   );
 };
 
