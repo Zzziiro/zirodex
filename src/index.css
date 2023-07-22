@@ -14,10 +14,10 @@ code {
 
 .Main {
   display: grid;
-  grid-template-columns: 200px 200px 200px 200px 200px 200px;
+  grid-template-columns: repeat(auto-fill, minmax(195px, 1fr));
   grid-gap: 15px;
-  margin-top: 15px;
-  margin-left: 15px;
+  margin: 15px;
+  background-image: "https://i.pinimg.com/originals/94/31/83/9431839eac798b442fb5b0fec3f27fa0.png";
 }
 
 .PokeCard {
@@ -26,6 +26,11 @@ code {
   border: solid;
   border-color: #232323;
   cursor: pointer;
+  height: 245px;
+  max-width: 245px;
+  background-color: #deddde;
+  width: 100%;
+  object-fit: cover;
 }
 
 .CardTitle {
@@ -33,4 +38,40 @@ code {
   margin-left: 10;
   font-size: 20;
   text-shadow: white 0 2px 8px;
+}
+
+.pagination {
+  cursor: pointer;
+}
+
+.page-item a {
+  background-color: white;
+  color: black;
+  float: left;
+  padding: 5px 10px;
+  font-size: small;
+  margin: 1px;
+  text-decoration: none;
+  border: 1px solid black;
+  margin-top: 5px;
+}
+
+.page-item a.active {
+  background-color: #4caf50;
+  color: white;
+  border: 1px solid #4caf50;
+}
+
+.page-item a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+.page-item a:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.page-item a:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
