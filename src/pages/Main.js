@@ -25,7 +25,9 @@ function Main() {
     for (var u = firstPokemon; u < lastPokemon; u++) {
       urls.push(`https://pokeapi.co/api/v2/pokemon/${u}`);
     }
-    axios.all(urls.map((url) => axios.get(url))).then((res) => setPokemon(res));
+    var response = axios
+      .all(urls.map((url) => axios.get(url)))
+      .then((res) => setPokemon(res));
     setLoading(false);
   };
 
@@ -36,7 +38,10 @@ function Main() {
       getPokemon();
     }
     for (var i in pokemon) {
-      if (pokemon[i].data.name.includes(name)) {
+      if (
+        pokemon[i].data.name.includes(name) ||
+        pokemon[i].data.id.toString().includes(name)
+      ) {
         filteredPokemon.push(pokemon[i]);
       }
     }

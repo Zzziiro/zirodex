@@ -13,22 +13,12 @@ export default function NavBar({ pokemonFilter, paginate }) {
         src="https://camo.githubusercontent.com/7f1f1e69bef239378a28e8aca7d1d7bd0890d37a7871d01135e2d044da6e2157/68747470733a2f2f692e696d6775722e636f6d2f415975745a4f462e706e67"
         style={{ height: 50, marginTop: 8, marginLeft: 8 }}
       />
-      <a style={{ color: "white" }}>made by</a>
+      <a style={{ color: "white" }}>made by </a>
       <a href="https://github.com/Zzziiro" style={{ color: "cyan" }}>
         Zzziiro
       </a>
-      <nav
-        style={{
-          position: "absolute",
-          right: 0,
-          marginRight: 20,
-          top: 0,
-          backgroundColor: "black",
-          paddingLeft: 30,
-          display: "inline-flex",
-        }}
-      >
-        <h2 style={{ color: "white" }}>Pages:</h2>
+      <nav className="Nav">
+        <h3 style={{ color: "white", marginTop: 22 }}>Pages:</h3>
         <ul style={{ paddingLeft: 10 }} className="pagination">
           {pageNumbers.map((number) => (
             <li
@@ -36,11 +26,7 @@ export default function NavBar({ pokemonFilter, paginate }) {
               key={number}
               className="page-item"
             >
-              <a
-                onClick={() => paginate(number)}
-                class={"active"}
-                className="page-link"
-              >
+              <a onClick={() => paginate(number)} className="page-link">
                 {number}
               </a>
             </li>
@@ -50,7 +36,7 @@ export default function NavBar({ pokemonFilter, paginate }) {
           style={{
             marginRight: 0,
             marginLeft: 20,
-            marginTop: 17,
+            marginTop: 16,
             height: 30,
             width: 300,
             borderRadius: 6,

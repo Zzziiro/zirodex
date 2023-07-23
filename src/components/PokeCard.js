@@ -11,11 +11,7 @@ const PokeCard = ({ name, sprite, id, types }) => {
   };
 
   return (
-    <div
-      // onClick={}
-      content="width=device-width, initial-scale=1.0"
-      className="PokeCard"
-    >
+    <div content="width=device-width, initial-scale=1.0" className="PokeCard">
       <img
         style={{
           height: 170,
