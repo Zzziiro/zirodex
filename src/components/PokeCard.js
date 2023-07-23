@@ -1,7 +1,9 @@
 import * as React from "react";
+import { useNavigate } from "react-router-dom";
 
 const PokeCard = ({ name, sprite, id, types }) => {
   const upperName = name.charAt(0).toUpperCase() + name.slice(1);
+  const navigate = useNavigate();
 
   const typeHandler = (types) => {
     if (types[1]) {
@@ -11,7 +13,11 @@ const PokeCard = ({ name, sprite, id, types }) => {
   };
 
   return (
-    <div content="width=device-width, initial-scale=1.0" className="PokeCard">
+    <div
+      content="width=device-width, initial-scale=1.0"
+      className="PokeCard"
+      onClick={() => navigate("/details")}
+    >
       <img
         style={{
           height: 170,

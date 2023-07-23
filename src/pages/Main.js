@@ -4,7 +4,7 @@ import PokeCard from "../components/PokeCard";
 import NavBar from "../components/NavBar";
 import axios from "axios";
 
-function Main() {
+function Main({ setPokeData }) {
   const [pokemon, setPokemon] = useState([]);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
@@ -58,12 +58,14 @@ function Main() {
         <div className="Main">
           {pokemon.map((poke) => (
             <>
-              <PokeCard
-                types={poke.data.types}
-                sprite={poke.data.sprites.front_default}
-                name={poke.data.name}
-                id={poke.data.id}
-              />
+              <box onClick={() => setPokeData(poke.data)}>
+                <PokeCard
+                  types={poke.data.types}
+                  sprite={poke.data.sprites.front_default}
+                  name={poke.data.name}
+                  id={poke.data.id}
+                />
+              </box>
             </>
           ))}
         </div>
