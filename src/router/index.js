@@ -4,13 +4,11 @@ import Main from "../pages/Main";
 import Detailed from "../pages/Detailed";
 
 export default function Router() {
-  const [pokeData, setPokeData] = useState();
-
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Main setPokeData={setPokeData} />} />;
-        <Route path="/details" element={<Detailed pokeData={pokeData} />} />
+        <Route path="/" element={<Main />} />;
+        <Route path="/details/:id" element={<Detailed />} />
       </Routes>
     </BrowserRouter>
   );

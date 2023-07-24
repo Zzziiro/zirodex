@@ -16,7 +16,7 @@ const PokeCard = ({ name, sprite, id, types }) => {
     <div
       content="width=device-width, initial-scale=1.0"
       className="PokeCard"
-      onClick={() => navigate("/details")}
+      onClick={() => navigate(`/details/${id}`)}
     >
       <img
         style={{
