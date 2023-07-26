@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
-import "../App.css";
-import PokeCard from "../components/PokeCard";
-import NavBar from "../components/NavBar";
+import PokeCard from "../../components/PokeCard";
+import NavBar from "../../components/NavBar";
 import axios from "axios";
 
 function Main() {
