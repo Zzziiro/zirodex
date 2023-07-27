@@ -7,6 +7,7 @@ export const AuthProvider = (props) => {
   const [loading, setLoading] = useState(false);
   const [pokemon, setPokemon] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
+  const [hiddenNav, setHiddenNav] = useState(false);
   const firstPokemon = currentPage + currentPage * 100 - 100;
   const lastPokemon = currentPage + currentPage * 100 + 1;
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
@@ -32,6 +33,8 @@ export const AuthProvider = (props) => {
         setPokemon,
         currentPage,
         setCurrentPage,
+        hiddenNav,
+        setHiddenNav,
         paginate,
         getPokemon,
       }}

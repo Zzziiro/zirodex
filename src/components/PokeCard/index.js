@@ -24,23 +24,40 @@ const PokeCard = ({ name, sprite, id, types }) => {
           maxWidth: 170,
           minWidth: 170,
           backgroundColor: "#deddde",
-          borderRadius: 10,
+          marginLeft: 15,
           marginBottom: 5,
         }}
         src={sprite}
       />
-      <a
+      <h4
         className="CardTitle"
         style={{
           top: 0,
           marginLeft: 10,
-          fontSize: 20,
+          marginTop: 0,
+          marginBottom: 5,
+          // fontSize: 14,
         }}
       >
         {upperName}
+      </h4>
+      <a
+        style={{
+          color: "#454545",
+          marginLeft: 10,
+          fontSize: 10,
+        }}
+      >
+        n° {id}
       </a>
-      <a style={{ color: "#454545" }}> - n° {id}</a>
-      <body style={{ marginLeft: 10, marginBottom: 10 }} color="text.secondary">
+      <body
+        style={{
+          marginLeft: 10,
+          marginTop: 5,
+          fontSize: 10,
+        }}
+        color="text.secondary"
+      >
         {typeHandler(types)}
       </body>
     </div>

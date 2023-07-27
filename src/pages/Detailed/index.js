@@ -32,7 +32,6 @@ export default function Detailed() {
     }
     return pokeDetails.types[0].type.name;
   };
-
   console.log(pokeDetails);
   return (
     <>
@@ -44,14 +43,30 @@ export default function Detailed() {
               flexDirection: "row",
               display: "flex",
               justifyContent: "center",
+              marginTop: 15,
             }}
           >
             <h1>
               {pokeDetails.name.charAt(0).toUpperCase() +
                 pokeDetails.name.slice(1)}
+              <a
+                style={{
+                  color: "#454545",
+                  marginLeft: 10,
+                  fontSize: 16,
+                }}
+              >
+                - n° {id}
+              </a>
             </h1>
           </div>
-          <div style={{ display: "inline-flex" }}>
+          <div
+            style={{
+              flexDirection: "row",
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
             <div>
               <img
                 src={
@@ -64,11 +79,11 @@ export default function Detailed() {
                     : pokeDetails.sprites.back_default
                 }
                 style={{
-                  width: 450,
-                  height: 450,
+                  width: 300,
+                  height: 300,
                   margin: 16,
                   backgroundColor: "#deddde",
-                  borderRadius: 10,
+                  // borderRadius: 10,
                   border: "solid",
                   borderColor: "#232323",
                 }}
@@ -79,12 +94,14 @@ export default function Detailed() {
                   style={{
                     cursor: "pointer",
                     margin: 5,
-                    marginLeft: 19,
-                    borderRadius: 10,
+                    marginLeft: 18,
+                    // borderRadius: 10,
                     border: "solid",
                     borderColor: "#232323",
-                    width: 220,
+                    width: 146,
                     height: 30,
+                    fontFamily: "PokemonGb",
+                    fontSize: 8,
                   }}
                 >
                   {"Regular / Shiny"}
@@ -94,11 +111,13 @@ export default function Detailed() {
                   style={{
                     cursor: "pointer",
                     margin: 5,
-                    borderRadius: 10,
+                    // borderRadius: 10,
                     border: "solid",
                     borderColor: "#232323",
-                    width: 220,
+                    width: 146,
                     height: 30,
+                    fontFamily: "PokemonGb",
+                    fontSize: 8,
                   }}
                 >
                   {"Front / Back"}
@@ -111,28 +130,30 @@ export default function Detailed() {
                   width: 450,
                   margin: 16,
                   backgroundColor: "#deddde",
-                  borderRadius: 10,
+                  // borderRadius: 10,
                   border: "solid",
                   borderColor: "#232323",
                   display: "flex",
                   justifyContent: "space-between",
                 }}
               >
-                <a style={{ marginLeft: "10%" }}>
-                  <h2>Height</h2>
-                  <p style={{ textAlign: "center", fontSize: 20 }}>
+                <a style={{ textAlign: "center", marginLeft: "5%" }}>
+                  <h3 style={{ textAlign: "center" }}>Height</h3>
+                  <p style={{ textAlign: "center", fontSize: 14 }}>
                     {pokeDetails.height * 10} cm
                   </p>
                 </a>
                 <a>
-                  <h2>Weight</h2>
-                  <p style={{ textAlign: "center", fontSize: 20 }}>
+                  <h3 style={{ textAlign: "center", marginLeft: "5%" }}>
+                    Weight
+                  </h3>
+                  <p style={{ textAlign: "center", fontSize: 14 }}>
                     {pokeDetails.weight / 10} kg
                   </p>
                 </a>
-                <a style={{ marginRight: "10%", textAlign: "center" }}>
-                  <h2>Type(s)</h2>
-                  <p style={{ textAlign: "center", fontSize: 20 }}>
+                <a style={{ marginRight: "5%", textAlign: "center" }}>
+                  <h3 style={{ textAlign: "center" }}>Type(s)</h3>
+                  <p style={{ textAlign: "center", fontSize: 14 }}>
                     {typeHandler()}
                   </p>
                 </a>
@@ -142,43 +163,75 @@ export default function Detailed() {
                   width: 450,
                   margin: 16,
                   backgroundColor: "#deddde",
-                  borderRadius: 10,
+                  // borderRadius: 10,
                   border: "solid",
                   borderColor: "#232323",
                   display: "flex",
                   justifyContent: "space-between",
                 }}
               >
-                <a style={{ marginLeft: "15%" }}>
-                  <h2 style={{ textAlign: "center" }}>HP</h2>
-                  <p style={{ textAlign: "center", fontSize: 20 }}>
+                <a style={{ marginLeft: "8%" }}>
+                  <h3 style={{ textAlign: "center" }}>HP</h3>
+                  <p style={{ textAlign: "center", fontSize: 14 }}>
                     {pokeDetails.stats[0].base_stat}
                   </p>
-                  <h2 style={{ textAlign: "center" }}>Spd</h2>
-                  <p style={{ textAlign: "center", fontSize: 20 }}>
+                  <h3 style={{ textAlign: "center" }}>Spd</h3>
+                  <p style={{ textAlign: "center", fontSize: 14 }}>
                     {pokeDetails.stats[3].base_stat}
                   </p>
                 </a>
                 <a>
-                  <h2 style={{ textAlign: "center" }}>Atk</h2>
-                  <p style={{ textAlign: "center", fontSize: 20 }}>
+                  <h3 style={{ textAlign: "center" }}>Atk</h3>
+                  <p style={{ textAlign: "center", fontSize: 14 }}>
                     {pokeDetails.stats[1].base_stat}
                   </p>
-                  <h2 style={{ textAlign: "center" }}>Sp Atk</h2>
-                  <p style={{ textAlign: "center", fontSize: 20 }}>
+                  <h3 style={{ textAlign: "center" }}>Sp Atk</h3>
+                  <p style={{ textAlign: "center", fontSize: 14 }}>
                     {pokeDetails.stats[4].base_stat}
                   </p>
                 </a>
-                <a style={{ marginRight: "15%" }}>
-                  <h2 style={{ textAlign: "center" }}>Def</h2>
-                  <p style={{ textAlign: "center", fontSize: 20 }}>
+                <a style={{ marginRight: "8%" }}>
+                  <h3 style={{ textAlign: "center" }}>Def</h3>
+                  <p style={{ textAlign: "center", fontSize: 14 }}>
                     {pokeDetails.stats[2].base_stat}
                   </p>
-                  <h2 style={{ textAlign: "center" }}>Sp Def</h2>
-                  <p style={{ textAlign: "center", fontSize: 20 }}>
+                  <h3 style={{ textAlign: "center" }}>Sp Def</h3>
+                  <p style={{ textAlign: "center", fontSize: 14 }}>
                     {pokeDetails.stats[5].base_stat}
                   </p>
                 </a>
+              </div>
+              <div
+                hidden={!pokeDetails.abilities[0].ability.name}
+                style={{
+                  width: 450,
+                  margin: 16,
+                  backgroundColor: "#deddde",
+                  // borderRadius: 10,
+                  border: "solid",
+                  borderColor: "#232323",
+                }}
+              >
+                <h3 style={{ paddingLeft: 20 }}>
+                  {pokeDetails.abilities.length < 2 ? "Ability" : "Abilities"}
+                </h3>
+                <p
+                  style={{
+                    fontSize: 14,
+                    display: "flex",
+                    justifyContent: "space-around",
+                  }}
+                >
+                  <a style={{ display: "list-item" }}>
+                    {pokeDetails.abilities[0].ability.name}
+                    {pokeDetails.abilities[0].ability.is_hidden && "(Hidden)"}
+                  </a>
+                  <a style={{ display: "list-item" }}>
+                    {pokeDetails.abilities[1].ability.name &&
+                      pokeDetails.abilities[1].ability.name}
+                    {pokeDetails.abilities[1].ability.is_hidden && "(Hidden)"}
+                  </a>
+                </p>
               </div>
             </div>
           </div>

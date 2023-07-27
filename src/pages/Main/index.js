@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import PokeCard from "../../components/PokeCard";
 import NavBar from "../../components/NavBar";
-import axios from "axios";
 import { AuthContext } from "../../context";
 import Loading from "../../components/Loading";
 
