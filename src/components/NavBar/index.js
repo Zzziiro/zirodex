@@ -12,11 +12,6 @@ export default function NavBar({ pokemonFilter, paginate }) {
 
   return (
     <div style={{ height: 70, backgroundColor: "black" }}>
-      {/* <img
-        src="https://camo.githubusercontent.com/7f1f1e69bef239378a28e8aca7d1d7bd0890d37a7871d01135e2d044da6e2157/68747470733a2f2f692e696d6775722e636f6d2f415975745a4f462e706e67"
-        style={{ height: 50, marginTop: 8, marginLeft: 8, cursor: "pointer" }}
-        onClick={() => navigate("/")}
-      /> */}
       <h1
         style={{
           color: "white",
@@ -31,7 +26,6 @@ export default function NavBar({ pokemonFilter, paginate }) {
         <a>P</a>
         <a style={{ color: "red" }}>o</a>
         <a>kédex</a>
-        {/* Pokédex */}
         <a style={{ color: "white", fontSize: 10 }}> made by </a>
         <a
           href="https://github.com/Zzziiro"
@@ -69,7 +63,6 @@ export default function NavBar({ pokemonFilter, paginate }) {
               marginTop: 18,
               height: 25,
               width: 200,
-              // borderRadius: 6,
               paddingLeft: 10,
               fontFamily: "PokemonGb",
               fontSize: 8,

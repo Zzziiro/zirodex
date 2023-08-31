@@ -32,20 +32,13 @@ export default function Detailed() {
     }
     return pokeDetails.types[0].type.name;
   };
-  console.log(pokeDetails);
+
   return (
     <>
       <NavBar />
       {pokeDetails.name && !loading ? (
         <>
-          <div
-            style={{
-              flexDirection: "row",
-              display: "flex",
-              justifyContent: "center",
-              marginTop: 15,
-            }}
-          >
+          <div className="detailed-grid">
             <h1>
               {pokeDetails.name.charAt(0).toUpperCase() +
                 pokeDetails.name.slice(1)}
@@ -83,19 +76,18 @@ export default function Detailed() {
                   height: 300,
                   margin: 16,
                   backgroundColor: "#deddde",
-                  // borderRadius: 10,
                   border: "solid",
                   borderColor: "#232323",
                 }}
               />
               <div>
                 <button
+                  className="sprite-button"
                   onClick={() => setShiny(!shiny)}
                   style={{
                     cursor: "pointer",
                     margin: 5,
                     marginLeft: 18,
-                    // borderRadius: 10,
                     border: "solid",
                     borderColor: "#232323",
                     width: 146,
@@ -107,11 +99,11 @@ export default function Detailed() {
                   {"Regular / Shiny"}
                 </button>
                 <button
+                  className="sprite-button"
                   onClick={() => setFront(!front)}
                   style={{
                     cursor: "pointer",
                     margin: 5,
-                    // borderRadius: 10,
                     border: "solid",
                     borderColor: "#232323",
                     width: 146,
@@ -128,30 +120,38 @@ export default function Detailed() {
               <div
                 style={{
                   width: 450,
-                  margin: 16,
+                  margin: 20,
                   backgroundColor: "#deddde",
-                  // borderRadius: 10,
                   border: "solid",
                   borderColor: "#232323",
                   display: "flex",
                   justifyContent: "space-between",
                 }}
               >
-                <a style={{ textAlign: "center", marginLeft: "5%" }}>
+                <a
+                  className="stats-title"
+                  style={{ textAlign: "center", marginLeft: "5%" }}
+                >
                   <h3 style={{ textAlign: "center" }}>Height</h3>
                   <p style={{ textAlign: "center", fontSize: 14 }}>
-                    {pokeDetails.height * 10} cm
+                    {pokeDetails.height * 10}cm
                   </p>
                 </a>
                 <a>
-                  <h3 style={{ textAlign: "center", marginLeft: "5%" }}>
+                  <h3
+                    className="stats-title"
+                    style={{ textAlign: "center", marginLeft: "5%" }}
+                  >
                     Weight
                   </h3>
                   <p style={{ textAlign: "center", fontSize: 14 }}>
-                    {pokeDetails.weight / 10} kg
+                    {pokeDetails.weight / 10}kg
                   </p>
                 </a>
-                <a style={{ marginRight: "5%", textAlign: "center" }}>
+                <a
+                  className="stats-title"
+                  style={{ marginRight: "5%", textAlign: "center" }}
+                >
                   <h3 style={{ textAlign: "center" }}>Type(s)</h3>
                   <p style={{ textAlign: "center", fontSize: 14 }}>
                     {typeHandler()}
@@ -161,9 +161,8 @@ export default function Detailed() {
               <div
                 style={{
                   width: 450,
-                  margin: 16,
+                  margin: 20,
                   backgroundColor: "#deddde",
-                  // borderRadius: 10,
                   border: "solid",
                   borderColor: "#232323",
                   display: "flex",
@@ -205,9 +204,8 @@ export default function Detailed() {
                 hidden={!pokeDetails.abilities[0].ability.name}
                 style={{
                   width: 450,
-                  margin: 16,
+                  margin: 20,
                   backgroundColor: "#deddde",
-                  // borderRadius: 10,
                   border: "solid",
                   borderColor: "#232323",
                 }}

@@ -36,7 +36,6 @@ const PokeCard = ({ name, sprite, id, types }) => {
           marginLeft: 10,
           marginTop: 0,
           marginBottom: 5,
-          // fontSize: 14,
         }}
       >
         {upperName}

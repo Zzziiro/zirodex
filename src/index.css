@@ -25,7 +25,6 @@ code {
 
 .PokeCard {
   box-sizing: border-box;
-  /* border-radius: 10px; */
   border: solid;
   border-color: #232323;
   cursor: pointer;
@@ -45,6 +44,29 @@ code {
 
 .pagination {
   cursor: pointer;
+}
+
+.sprite-button {
+  cursor: pointer;
+  margin: 5;
+  border: solid;
+  border-color: #232323;
+  width: 146;
+  height: 30;
+  font-family: PokemonGb;
+  font-size: 8;
+}
+
+.detailed-grid {
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+  margin-top: 15;
+}
+
+.stats-title {
+  margin-right: 5%;
+  text-align: center;
 }
 
 .page-item a {
