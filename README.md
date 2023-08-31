@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# **O desafio**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### **Descrição:**
 
-## Available Scripts
+Criar uma aplicação web responsável por listar todos os pokémons e possibilitar visualizar dados específicos de cada um. Para tal, você fará uso da PokéAPI (disponível em https://pokeapi.co/), através de requisições REST que retornarão os dados desejados.
 
-In the project directory, you can run:
+### **Regras:**
 
-### `npm start`
+- Criar uma página principal contendo a lista de pokémons (preferencialmente uma lista paginada!);
+- Ao clicar em um dos itens da lista, deverá redirecionar para uma página contendo os seguintes detalhes do pokémon:
+  - Nome
+    - Imagem padrão do pokémon, possível de alternar entre frente e costas (não se preocupe com outras versões do mesmo pokémon):
+    - Altura em cm
+    - Peso em kg
+    - Status base (velocidade, ataque, defesa, vida...)
+    - Habilidade(s)
+    - Tipo(s)
+- Deve ser possível retornar da página do pokémon para a página principal;
+- Não utilizar bibliotecas externas com estilos e elementos prontos (Bootstrap, Material UI, etc). Se MUITO necessário, pode utilizar bibliotecas para componentes específicos;
+- A interface pode estar em português ou inglês.
+- Disponibilizar o código no github para validação.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### **Critérios técnicos:**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### **Essenciais:**
 
-### `npm test`
+- [x] Código em inglês
+- [x] Sintaxe ES6
+- [x] Componentização
+- [x] Layout responsivo
+- [x] React Hooks
+- [x] Context
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+# **Especificações técnicas do meu projeto**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### **Cores**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Inicialmente o intuito do projeto era o de imitar o design de uma pokedex clássica, do Game Boy Color, por isso a paleta foi mantida simples e básica, porém o direcionamento mudou quando vi que os sprites dos Pokémon eram mais recentes, o que poderia causar estranhamento, então fiz meu máximo pra manter o padrão e ser fiel ao material, mas não sendo 100% por causa dos sprites modernos.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Preto #232323
+Cinza escuro #454545
+Cinza claro #deddde
+Vermelho #ff0000
+Branco #ffffff
 
-### `npm run eject`
+### **Fonte**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+A fonte usada no projeto é um clone da fonte original do Game Boy e Game Boy Color
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Pokemon GB Font
+https://www.fontspace.com/pokemon-gb-font-f9621
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### **Layout**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+O layout em si é responsivo, muda a quantidade de cards mostrando dependendo do tamanho da tela e do zoom aplicado, porém existem algumas especificidades para torná-lo ordenado
 
-## Learn More
+Espaçamento entre os cards grid-gap: 15px
+Margem da página margin: 15px
+Altura dos cards/linhas height: 245px
+Altura da navBar height: 70px
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## **Adições que eu quero fazer em uma revisita**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [ ] Botão para avançar/retornar de página no final de cada página
+- [ ] Modo claro e escuro
+- [ ] Melhor pesquisa, trazer todos os resultados
+- [ ] Repaginação visual
