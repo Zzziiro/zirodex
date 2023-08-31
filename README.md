@@ -39,27 +39,26 @@ Criar uma aplicação web responsável por listar todos os pokémons e possibili
 
 Inicialmente o intuito do projeto era o de imitar o design de uma pokedex clássica, do Game Boy Color, por isso a paleta foi mantida simples e básica, porém o direcionamento mudou quando vi que os sprites dos Pokémon eram mais recentes, o que poderia causar estranhamento, então fiz meu máximo pra manter o padrão e ser fiel ao material, mas não sendo 100% por causa dos sprites modernos.
 
-- Preto #232323
-- Cinza escuro #454545
-- Cinza claro #deddde
-- Vermelho #ff0000
-- Branco #ffffff
+- Preto -> #232323
+- Cinza escuro -> #454545
+- Cinza claro -> #deddde
+- Vermelho -> #ff0000
+- Branco -> #ffffff
 
 ### **Fonte**
 
 A fonte usada no projeto é um clone da fonte original do Game Boy e Game Boy Color
 
-- Pokemon GB Font
-  https://www.fontspace.com/pokemon-gb-font-f9621
+- Pokemon GB Font -> https://www.fontspace.com/pokemon-gb-font-f9621
 
 ### **Layout**
 
 O layout em si é responsivo, muda a quantidade de cards mostrando dependendo do tamanho da tela e do zoom aplicado, porém existem algumas especificidades para torná-lo ordenado
 
-- Espaçamento entre os cards grid-gap: 15px
-- Margem da página margin: 15px
-- Altura dos cards/linhas height: 245px
-- Altura da navBar height: 70px
+- Espaçamento entre os cards -> grid-gap: 15px
+- Margem da página -> margin: 15px
+- Altura dos cards/linhas -> height: 245px
+- Altura da navBar -> height: 70px
 
 ## **Adições que eu quero fazer em uma revisita**
 
