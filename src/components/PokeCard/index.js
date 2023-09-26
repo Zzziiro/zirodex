@@ -51,6 +51,7 @@ const PokeCard = ({ name, sprite, id, types }) => {
       </a>
       <body
         style={{
+          backgroundColor: "#deddde",
           marginLeft: 10,
           marginTop: 5,
           fontSize: 10,

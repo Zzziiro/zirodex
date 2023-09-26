@@ -65,4 +65,3 @@ O layout em si é responsivo, muda a quantidade de cards mostrando dependendo do
 - [ ] Botão para avançar/retornar de página no final de cada página
 - [ ] Modo claro e escuro
 - [ ] Melhor pesquisa, trazer todos os resultados
-- [ ] Repaginação visual

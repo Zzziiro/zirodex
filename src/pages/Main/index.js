@@ -55,6 +55,36 @@ function Main() {
               />
             </>
           ))}
+          <div
+            style={{
+              maxWidth: 245,
+              width: "100%",
+              height: 245,
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "self-end",
+            }}
+          >
+            <button
+              style={{ width: 55, height: 40, fontSize: 20 }}
+              onClick={() =>
+                currentPage !== 1 ? paginate(currentPage - 1) : paginate(10)
+              }
+              className="sprite-button"
+            >
+              {"<"}
+            </button>
+            <a style={{ marginBottom: 13 }}>Pages</a>
+            <button
+              style={{ width: 55, height: 40, fontSize: 20 }}
+              onClick={() =>
+                currentPage !== 10 ? paginate(currentPage + 1) : paginate(1)
+              }
+              className="sprite-button"
+            >
+              {">"}
+            </button>
+          </div>
         </div>
       )}
     </>
