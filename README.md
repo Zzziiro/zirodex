@@ -1,8 +1,6 @@
-# **O desafio**
-
 ### **Descrição:**
 
-Criar uma aplicação web responsável por listar todos os pokémons e possibilitar visualizar dados específicos de cada um. Para tal, você fará uso da PokéAPI (disponível em https://pokeapi.co/), através de requisições REST que retornarão os dados desejados.
+Aplicação web responsável por listar todos os pokémons e possibilitar visualizar dados específicos de cada um. Para tal, é utilizada a PokéAPI (disponível em https://pokeapi.co/), através de requisições REST que retornarão os dados desejados.
 
 ### **Regras:**
 
