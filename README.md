@@ -35,7 +35,7 @@ Aplicação web responsável por listar todos os pokémons e possibilitar visual
 
 ### **Cores**
 
-Inicialmente o intuito do projeto era o de imitar o design de uma pokedex clássica, do Game Boy Color, por isso a paleta foi mantida simples e básica, porém o direcionamento mudou quando vi que os sprites dos Pokémon eram mais recentes, o que poderia causar estranhamento, então fiz meu máximo pra manter o padrão e ser fiel ao material, mas não sendo 100% por causa dos sprites modernos.
+Inicialmente o intuito do projeto era o de imitar o design de uma pokedex clássica, do GameBoy Color, por isso a paleta foi mantida simples e básica, porém o direcionamento mudou quando vi que os sprites dos Pokémon eram mais recentes, o que poderia causar estranhamento, então fiz meu máximo pra manter o padrão e ser fiel ao material, mas não sendo 100% por causa dos sprites modernos.
 
 - Preto -> #232323
 - Cinza escuro -> #454545
@@ -45,7 +45,7 @@ Inicialmente o intuito do projeto era o de imitar o design de uma pokedex cláss
 
 ### **Fonte**
 
-A fonte usada no projeto é um clone da fonte original do Game Boy e Game Boy Color
+A fonte usada no projeto é um clone da fonte original do GameBoy e GameBoy Color
 
 - Pokemon GB Font -> https://www.fontspace.com/pokemon-gb-font-f9621
 
