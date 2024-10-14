@@ -6,13 +6,13 @@ Aplicação web responsável por listar todos os pokémons e possibilitar visual
 
 - Criar uma página principal contendo a lista de pokémons (preferencialmente uma lista paginada!);
 - Ao clicar em um dos itens da lista, deverá redirecionar para uma página contendo os seguintes detalhes do pokémon:
-  - Nome
-    - Imagem padrão do pokémon, possível de alternar entre frente e costas (não se preocupe com outras versões do mesmo pokémon):
-    - Altura em cm
-    - Peso em kg
-    - Status base (velocidade, ataque, defesa, vida...)
-    - Habilidade(s)
-    - Tipo(s)
+- Nome
+  - Imagem padrão do pokémon, possível de alternar entre frente e costas (não se preocupe com outras versões do mesmo pokémon):
+  - Altura em cm
+  - Peso em kg
+  - Status base (velocidade, ataque, defesa, vida...)
+  - Habilidade(s)
+  - Tipo(s)
 - Deve ser possível retornar da página do pokémon para a página principal;
 - Não utilizar bibliotecas externas com estilos e elementos prontos (Bootstrap, Material UI, etc). Se MUITO necessário, pode utilizar bibliotecas para componentes específicos;
 - A interface pode estar em português ou inglês.
