@@ -13,11 +13,13 @@ function Main() {
     getPokemon,
     loading,
     setLoading,
+    getPokeList,
   } = React.useContext(AuthContext);
   const firstPokemon = currentPage + currentPage * 100 - 100;
 
   useEffect(() => {
     getPokemon();
+    getPokeList();
   }, [firstPokemon]);
 
   const pokemonFilter = (name) => {
@@ -42,7 +44,7 @@ function Main() {
     <>
       <NavBar paginate={paginate} pokemonFilter={pokemonFilter} />
       {loading ? (
-        <Loading />
+        <Loading key="loading" />
       ) : (
         <div className="Main">
           {pokemon.map((poke) => (
@@ -55,16 +57,7 @@ function Main() {
               />
             </>
           ))}
-          <div
-            style={{
-              maxWidth: 245,
-              width: "100%",
-              height: 245,
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "self-end",
-            }}
-          >
+          <div className="SubPagination">
             <button
               style={{ width: 55, height: 40, fontSize: 20 }}
               onClick={() =>
@@ -74,7 +67,6 @@ function Main() {
             >
               {"<"}
             </button>
-            <a style={{ marginBottom: 13 }}>Pages</a>
             <button
               style={{ width: 55, height: 40, fontSize: 20 }}
               onClick={() =>

@@ -5,7 +5,7 @@ export default function Loading() {
     <h1
       style={{
         textAlignLast: "center",
-        marginTop: 100,
+        marginTop: 150,
       }}
     >
       Loading...

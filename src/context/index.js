@@ -21,6 +21,7 @@ export const AuthProvider = (props) => {
       .all(urls.map((url) => axios.get(url)))
       .then((res) => setPokeList(res))
       .finally(() => setLoading(false));
+    console.log(pokeList);
   };
 
   const getPokemon = () => {
